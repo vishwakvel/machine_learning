@@ -2,7 +2,6 @@
 
 ## A zoo of sorts for all the machine learning models.
 
-## Full model list by category
 ### Deep Learning
 - Bert Style
 - Convolutional Neural Network
