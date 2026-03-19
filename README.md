@@ -1,17 +1,6 @@
-# ML Model Zoo
+# Machine Learning
 
-## What this repository is
-`ml_model_zoo/` is a scaffolded machine learning model zoo that organizes a wide range of algorithms into clear, independent folders. Each model has its own workspace with `model.py`, `trainer.py`, `config.py`, `utils.py`, `__init__.py`, and a model-specific `README.md`.
-
-## How it is organized
-- `core/`: Shared infrastructure placeholders (base abstractions, metrics, optimizers, losses, activations, data, regularization, initializers, schedulers, and utilities).
-- `supervised/`: Regression and classification models grouped by family.
-- `unsupervised/`: Clustering, dimensionality reduction, and anomaly detection models.
-- `reinforcement_learning/`: Environment definitions and RL algorithm families.
-- `deep_learning/`: Engine pieces, layers, and deep model families.
-- `ensembles/`: Ensemble learning approaches.
-- `tests/`: Task-oriented test directories.
-- `benchmarks/`: Benchmark runner and result folders.
+## A zoo of sorts for all the machine learning models.
 
 ## Full model list by category
 ### Deep Learning
@@ -139,9 +128,3 @@
 - Spectral Embedding
 - UMAP
 - t-SNE
-
-## How to navigate
-- Start from task type (`supervised`, `unsupervised`, `reinforcement_learning`, `deep_learning`, `ensembles`).
-- Drill into family folders (for example, `tree_based`, `svm`, `transformers`).
-- Open a model folder to find the dedicated README and the five placeholder Python files.
-- Use `core/` when you need shared reusable foundations instead of model-specific artifacts.
