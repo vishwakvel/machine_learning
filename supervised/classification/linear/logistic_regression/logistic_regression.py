@@ -22,7 +22,7 @@ class LogisticRegression: # w = w - a * ∇L(w) -> w = w - a * (1/n) * X^T * (y_
         self.loss_history = [] # initializing the loss history to an empty list
 
         for _ in range(self.n_iterations): # solving the logistic regression equations
-            z = X_b @ self.weights
+            z = X_b @ self.weights # Logit (linear combination of features and weights) = ln(p / (1 - p)) where p is the probability of the positive class (y = 1)
             y_predicted = self.sigmoid(z)
             error = y_predicted - y
             gradient = (1 / n_samples) * X_b.T @ error
@@ -36,7 +36,7 @@ class LogisticRegression: # w = w - a * ∇L(w) -> w = w - a * (1/n) * X^T * (y_
     def predict(self, X):
         X_b = self.add_bias_column(X)
         probabilities = self.sigmoid(X_b @ self.weights)
-        return (probabilities >= 0.5).astype(int) # converting probabilities to binary predictions (0 or 1)
+        return (probabilities >= 0).astype(int) # 0 is the threshold for classification which can be adjusted as needed (higher threshold means more conservative classification)
     
     def score(self, X, y):
         predictions = self.predict(X)
